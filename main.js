@@ -90,8 +90,24 @@ posts.forEach((element) => {
                 </div> 
             </div>            
         </div>`
+
+
     
 });
 
 const cardPreview = document.getElementById(`container`)
 cardPreview.innerHTML += itemContent;
+
+const miPiace = document. getElementsByClassName (' js-like-button')
+console. log (miPiace)
+
+for (let i=0 ; i < miPiace.length; i++){
+    miPiace[i ].addEventListener ( 'click' , function ( ) {
+
+    const postId = this.dataset.postid
+    const likes = document. getElementById(`like-counter-${postId}`)
+    const likesNumber = parseInt(likes.innerText)
+    likes.innerText = likesNumber+1
+    console.log (likesNumber)
+    })
+}
