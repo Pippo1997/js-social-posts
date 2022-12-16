@@ -105,7 +105,7 @@ for (let i=0 ; i < miPiace.length; i++){
     miPiace[i ].addEventListener ( 'click' , function ( ) {
 
     const postId = this.dataset.postid
-    const likes = document. getElementById(`like-counter-${postId}`)
+    const likes = document. getElementById(`like-${postId}`)
     const likesNumber = parseInt(likes.innerText)
     likes.innerText = likesNumber+1
     console.log (likesNumber)
